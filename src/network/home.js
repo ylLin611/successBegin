@@ -24,6 +24,17 @@ export function getWeatherNow(location) {
   })
 }
 
+//获取三天天气预测
+export function getWeatherThree(location) {
+  return axios({
+    url: 'https://devapi.heweather.net/v7/weather/3d',
+    params: {
+      key: '5264cb1244b346f5abf30590bb671a46',
+      location//城市名称 、 经纬度 例：116.4,39.1
+    }
+  })
+}
+
 //获取七天天气预测
 export function getWeatherSeven(location) {
   return axios({
